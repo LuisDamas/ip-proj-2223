@@ -16,12 +16,9 @@ typedef struct
    int  id;
    char full_name[MAX_NAME_SIZE+1];
    char address[MAX_ADDRESS_SIZE+1];
-   char email[MAX_EMAIL_SIZE+1];
-   DATE birth_date;
-   char gender[MAX_GENDER_SIZE+1];
-   int zip;
-   char country_code[MAX_COUNTRY_CODE_SIZE+1];
-   char dep[MAX_DEP_SIZE+1];
+
+  // TODO
+
    int is_active;
 } PERSON;
 
