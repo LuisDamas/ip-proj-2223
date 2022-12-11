@@ -1,9 +1,6 @@
 ## Dataset
 
-Cada *dataset* é composto por dois ficheiros:
-
-- **person.txt** - Lista de registos com dados das pessoas;
-- **country.txt** - Lista de códigos de países de acordo com a norma ISO 3166.
+Cada *dataset* é composto por um ficheiro csv. Existem vários ficheiros na pasta ***datasets***.
 
 
 
@@ -12,12 +9,13 @@ Cada *dataset* é composto por dois ficheiros:
 Em cada ficheiro de dados do *dataset* apresenta as seguintes características:
 
 - Cada linha contém um registo de dados terminando a linha com o caráter *newline* (\n);
-- Os campos são separados entre si pelo caráter *tab* (\t);
-- Poderá existir um número variável de linhas de comentário antes, no meio ou no final dos dados.
+- Os campos de dados são separados entre si pelo caráter *tab* (\t);
+- Poderá existir um número variável de linhas de comentário antes ou no meio dos dados.
 - Uma linha do dataset é considerada um comentário se:
   - Começar pelo caráter **#**;
   - Não contiver qualquer caráter (linha vazia);
-  - For composta apenas por espaço(s) ou *tab*(s) (\t).
+  - For composta apenas por espaço(s) e/ou *tab*(s) (\t).
+- Existe apenas uma linha com o cabeçalho das colunas antes da primeira linha de dados. No caso da lista de pessoas, a linha de cabeçalho começa pela *string* **id[espaço]**.
 
 
 
@@ -32,9 +30,9 @@ Em cada ficheiro de dados do *dataset* apresenta as seguintes características:
 
 
 
-### Ficheiro person.txt
+### Ficheiros com dados de pessoas  (all-persons.csv, sample.csv e some.csv)
 
-O ficheiro **person.txt** apresenta os seguintes campos:
+Os ficheiros com dados de pessoas apresentam os seguintes campos:
 
 - **id** - Identificador da pessoa (Inteiro);
 - **first_name** - Primeiro nome (*String*);
@@ -52,24 +50,24 @@ O ficheiro **person.txt** apresenta os seguintes campos:
 
 <figure align="center">
     <img src="person-01.png" alt="person file sample"/>
-    <figureCaption>Ficheiro: <b>person.txt</b></figureCaption>
+    <figureCaption>Ficheiro: <b>all-persons.csv</b></figureCaption>
 </figure>
+
 
 > :warning: **Atenção** - O conteúdo de alguns campos do ficheiro podem não ser válidos ou apresentar características especiais. 
 >
-> No exemplo em cima **person.txt**:
+> No exemplo em cima:
 >
 > - **birth_date** - Algumas datas podem ser inválidas (vermelho);
-> - **country_code** - Alguns códigos de país podem não existir na lista de códigos de país (rosa);
 > - **address** - Moradas podem não ter conteúdo (*string* vazia);
-> - **is_active** - Quando for falso, o registo existe mas deve ser ignorado pela aplicação (laranja).
->
+> - **is_active** - Quando for falso, o registo existe, deve ser lido pela aplicação, mas deve ser ignorado por esta (laranja).
+> 
 
 
 
-### Ficheiro country.txt
+### Ficheiro countries.csv
 
-O ficheiro **country.txt** apresenta os seguintes campos:
+O ficheiro **country.csv** apresenta os seguintes campos:
 
 - **country_code** - Código único de país com 2 *chars* (String);
 - **country_code3** - Código único de país com 3 *chars* (String);
